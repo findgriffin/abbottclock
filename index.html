@@ -23,45 +23,44 @@
 
       </header>
       <section>
-<div class="center">
-	Countdown to Tony outlasting Kevin:
-	<div id="kevinClock" class="clock" style="margin:2em;"></div>
-	Countdown to Tony outlasting Julia:
-	<div id="juliaClock" class="clock" style="margin:2em;"></div>
-</div>
-	
-	<script type="text/javascript">
-		var kevinClock;
-		var juliaClock;
+        <div class="center">
+            Countdown to Tony outlasting Kevin:
+            <div id="kevinClock" class="clock" style="margin:2em;"></div>
+            Countdown to Tony outlasting Julia:
+            <div id="juliaClock" class="clock" style="margin:2em;"></div>
+        </div>
+      
+        <script type="text/javascript">
+          var kevinClock;
+          var juliaClock;
 
-		$(document).ready(function() {
+          $(document).ready(function() {
 
-			// Grab the current date
-			var currentDate = new Date();
+              // Grab the current date
+              var currentDate = new Date();
 
-			// Calculate the time until Tony beats Kevin.
-			var kevinDate  = new Date(2016, 4, 9);
-			var kevinDiff = kevinDate.getTime() / 1000 - currentDate.getTime() / 1000;
+              // Calculate the time until Tony beats Kevin.
+              var kevinDate  = new Date(2016, 4, 9);
+              var kevinDiff = kevinDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
-			// Calculate the time until Tony beats Julia.
-			var juliaDate  = new Date(2016, 9, 21);
-			var juliaDiff = juliaDate.getTime() / 1000 - currentDate.getTime() / 1000;
+              // Calculate the time until Tony beats Julia.
+              var juliaDate  = new Date(2016, 9, 21);
+              var juliaDiff = juliaDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
-			// Instantiate a coutdown FlipClock
-			kevinClock = $('#kevinClock').FlipClock(kevinDiff, {
-				clockFace: 'DailyCounter',
-				countdown: true
-			});
-			// Instantiate a coutdown FlipClock
-			juliaClock = $('#juliaClock').FlipClock(juliaDiff, {
-				clockFace: 'DailyCounter',
-				countdown: true
-			});
-		});
-	</script>
+              // Instantiate a coutdown FlipClock
+              kevinClock = $('#kevinClock').FlipClock(kevinDiff, {
+                      clockFace: 'DailyCounter',
+                      countdown: true
+              });
+              // Instantiate a coutdown FlipClock
+              juliaClock = $('#juliaClock').FlipClock(juliaDiff, {
+                      clockFace: 'DailyCounter',
+                      countdown: true
+              });
+          });
+        </script>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/findgriffin">findgriffin</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
