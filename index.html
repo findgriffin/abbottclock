@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Can somebody please #BoneTone?</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="javascripts/flipclock.min.js"></script>	
+
+    <link rel="stylesheet" href="stylesheets/flipclock.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+    .centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Will Tony Abbott outlast Kevin07 or Juliar?</h1>
+        <p> Tony Abbott ran the most negative campaign Australia had ever seen
+        against Kevin Rudd and then Julia Gillard. Tony's negativity and
+        belligerence led to the downfall of Kevin07, the compromises made by
+        Gillards minority government and the policy straitjacket that the Abbott
+        government now finds itself in.</p>
+        <p>Can Tony Abbott outlast either of the Labor leaders whom he relentlessly
+        attacked for being incompetent and breaking promises?</p>
+      </header>
+      <section>
+        <p>Kevin Rudd was PM (the first time) from the 3rd of September 2007 to the 24th
+        of June 2010 or 934 days.</p>
+        Julia Gillard was PM from 24th of June 2010 to the 27th of June 2013 or 1099
+        days.</p>
+        There are
+        <div id="kevinClock" class="clock" style="margin:2em;"></div>
+        <p style="text-align:right">until Tony outlasts Kevin.</p>
+        and
+        <div id="juliaClock" class="clock" style="margin:2em;"></div>
+        <p style="text-align:right">until Tony outlasts Julia.</p>
+        Short of an early election, there is only one realistic way to depose
+        him: <em>A leadership challenge!</em>  
+        <p>So <a
+          href="https://twitter.com/TurnbullMalcolm">Malcom</a>, 
+        <a href="https://twitter.com/JulieBishopMP">Julie</a> and 
+        <a href="https://twitter.com/JoeHockey">Joe</a>...
+        now is your
+        time</p> 
+        <h3>Australia needs you!</h3>
+        <img class="centered" src="images/kitchener_ausflag.jpg" width=300 alt="Lord Kitchener says that
+        Australia needs you!">
+        What is the internet saying about Tony?
+        <a class="twitter-timeline"
+          href="https://twitter.com/hashtag/tonyabbott"
+          data-widget-id="615064273417539585">#tonyabbott Tweets</a>
+        <script>!function(d,s,id){var
+          js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      
+        <script type="text/javascript">
+          var kevinClock;
+          var juliaClock;
+
+          $(document).ready(function() {
+
+              // Grab the current date
+              var currentDate = new Date();
+
+              // Calculate the time until Tony beats Kevin.
+              var kevinDate  = new Date(2016, 4, 9);
+              var kevinDiff = kevinDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+              // Calculate the time until Tony beats Julia.
+              var juliaDate  = new Date(2016, 9, 21);
+              var juliaDiff = juliaDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+              // Instantiate a coutdown FlipClock
+              kevinClock = $('#kevinClock').FlipClock(kevinDiff, {
+                      clockFace: 'DailyCounter',
+                      countdown: true
+              });
+              // Instantiate a coutdown FlipClock
+              juliaClock = $('#juliaClock').FlipClock(juliaDiff, {
+                      clockFace: 'DailyCounter',
+                      countdown: true
+              });
+          });
+        </script>
+      </section>
+      <footer>
+      <br>
+        <p><small>Hosted on GitHub Pages.
+        Theme by <a
+          href="https://github.com/orderedlist">orderedlist</a>.
+        Clocks from <a href="http://flipclockjs.com/">FlipClock.js</a>.</small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
